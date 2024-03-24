@@ -1,55 +1,56 @@
+<!--
+Nome: Amanda Luiza Dias Santos    nº: 02   Turma: 3°B
+Nome: Erick Oliveira Gomes        nº: 08 
+Nome: Isadora Cassioti Teodoro    nº: 13 
+Nome: Patrick Gomes de Sousa      nº: 25 
+Nome: Yasmin Ferreira Salgado     nº: 30 
+-->
 <!DOCTYPE html>
-      <!-- Nome: Amanda Luiza Dias Santos   N° 02     
-           Nome: Erick Oliveira Gomes       N° 08
-           Nome: Isadora Cassioti Teodoro   N° 13     3°B
-           Nome: Patrick Gomes de Sousa     N° 25
-           Nome: Yasmin Ferreira Salgado    N° 30
-        -->
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Números Primos</title>
-    <script>
-        function Primos() {
-            var N1 = parseInt(document.getElementById("numero1").value, 10);
-            var canvas = document.getElementById("MeuCanvas");
-            var ctx = canvas.getContext("2d");
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.font = "20px Arial";
-            ctx.fillStyle = "blue"; 
-            var resultado = '';
-
-            if (N1 < 2 ) {
-                resultado = N1 + " não é primo";
-            } 
-            else {
-                var primo = true;
-
-            for (var contador = 2; contador <= Math.sqrt(N1); contador++) {
-                if (N1 % contador === 0) {
-                    primo = false;
-                    break;
-                }
-            }
-            
-            if (primo){
-                resultado = N1 + " é primo";
-            } 
-            else{
-                resultado = N1 + " não é primo";
-            }
-        }
-
-        ctx.fillText(resultado, 10, 50);
-    }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Portiforio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <label for="numero1">É Número Primo ou Não?</label>   
-    <input type="numero" id="numero1"><br><br>
 
-    <button onclick="Primos()">Calcular</button><br><br>
-    
-    <canvas id="MeuCanvas" width="300" height="300" style="border:1px solid #000000; background-color: white;"></canvas>
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho__marca">
+    <img class="cabecalho__marca__logo" src="logoalcina.png">
+    <h1 class="cabecalho__marca__nome">EME Profa Alcina Dantas Feijão</h1>
+</div>
+
+<nav class="cabecalho__menu">
+<a class="cabecalho__menu__link" href="index.html">Home</a>
+<a class="cabecalho__menu__link" href="sobre_mim.html">Sobre mim</a>
+</nav>
+</header>
+
+<main class="apresentacao">
+  <section class="apresentacao__conteudo">
+  <h1 class="apresentacao__conteudo__titulo">Portfólio Sobre o <strong class="titulo-destaque">ERICK</strong></h1>
+  <p class="apresentacao__conteudo__texto">Olá, sou Erick e estou fazendo um curso técnico no EME Profa Alcina Dantas Feijão.
+    Embora esteja apenas no começo da minha vida profissional, sinto-me feliz em compartilhar minha paixão pela área de Tecnologia da Informação.
+    Desde que descobri meu interesse por TI, tenho buscado desenvolver novas habilidades e ampliar meus conhecimentos.
+    Meu portfólio é um reflexo do meu esforço até o momento. Nele, você encontrará projetos escolares que mostram meu progresso 
+    e as habilidades que venho aprendendo ao longo das aulas. Estou compartilhando minhas experiências nesta jornada pela Tecnologia da Informação.</p>
+
+  <div class="apresentacao__links">
+  <h2 class="apresentacao__links__subtitulo">Acesse as minhas redes:</h2>
+  <a class="apresentacao__links__navegacao" href="https://www.instagram.com/erickog_011/">
+  <img src="instagram.png" class="apresentacao__links__navegacao__imagem">Instagram</a>
+
+  <a class="apresentacao__links__navegacao" href="https://www.facebook.com/erick.oliveira.9277583">
+  <img src="facebook.png" class="apresentacao__links__navegacao__imagem">Facebook</a>
+
+  <a class="apresentacao__links__navegacao" href="https://www.linkedin.com/in/erick-oliveira-a76259300/">
+  <img src="linkedin.png" class="apresentacao__links__navegacao__imagem">Linkedin</a>
+
+</div>
+
+</section>
+  <img class="apresentacao__imagem" src="code.png">
+</main>
 </body>
 </html>
